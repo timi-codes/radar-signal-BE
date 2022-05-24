@@ -25,9 +25,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // MIDDLEWARE
 app.use(bodyParser.json());
-app.use(cors({
-    origin: ['https://fkipongejlaaachjiaipijmmnhcacbca.chromiumapp.org', 'https://cmffbfaeibinhojfdhdgmbobdjbbjkih.chromiumapp.org'],
-}));
+// app.use(cors({
+//     origin: ['https://fkipongejlaaachjiaipijmmnhcacbca.chromiumapp.org', 'https://cmffbfaeibinhojfdhdgmbobdjbbjkih.chromiumapp.org'],
+// }));
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 
 app.use(async(req, res, next) => {
