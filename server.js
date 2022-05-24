@@ -15,7 +15,7 @@ if (result.error) {
 const app = express();
 
 // CONSTANT
-const DB_URL = "mongodb://localhost:27017/radar-signal"
+const DB_URL = process.env.DATABASE_URL
 const PORT = process.env.PORT || 4000;
 
 // SETUP MONGO DATABASE
