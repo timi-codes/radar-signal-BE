@@ -29,10 +29,10 @@ app.use(cors({
     origin: ['chrome-extension://fkipongejlaaachjiaipijmmnhcacbca', 'chrome-extension://cmffbfaeibinhojfdhdgmbobdjbbjkih'],
 }));
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     next();
-// });
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 
 app.use(async(req, res, next) => {
