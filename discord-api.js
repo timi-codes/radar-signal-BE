@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 
 const isUserARadar = async (access_token) => {
     const guildResponse = await fetch(`https://discord.com/api/users/@me/guilds`, {
+        crossDomain:true,
         headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${access_token}`
