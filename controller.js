@@ -20,6 +20,7 @@ const getAuthToken = async(req, res) => {
         if(!isARadar) {
             return res.status(401).send({error: 'You  are not yet a member  of Radar Server. Please join the server'});
         }
+        console.log(isARadar, code)
 
         const { user } = await getUserInfo(access_token);
         await Profile.findOneAndUpdate(
@@ -33,6 +34,7 @@ const getAuthToken = async(req, res) => {
             { upsert: true, new: true, setDefaultsOnInsert: true }
         )
 
+        console.log(user)
         const token = jwt.sign(
             {
                 userId: user.id,
@@ -41,6 +43,7 @@ const getAuthToken = async(req, res) => {
             },
             process.env.JWT_SECRET,
         )
+        console.log(token)
 
         return res.send({
             token,
