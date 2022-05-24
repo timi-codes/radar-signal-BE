@@ -26,7 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // MIDDLEWARE
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'chrome-extension://fkipongejlaaachjiaipijmmnhcacbca',
+    origin: 'chrome-extension://cmffbfaeibinhojfdhdgmbobdjbbjkih',
     credentials: true
 }));
 
