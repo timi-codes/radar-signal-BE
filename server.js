@@ -39,7 +39,7 @@ app.use(async(req, res, next) => {
 
     console.log("req", req.path)
 
-    if(req.path !== '/cors-anywhere/authorize') {
+    if(req.path !== '/authorize') {
         const token = req?.headers?.authorization?.split(' ')[1];
         console.log("token", token)
         if(!token) {
