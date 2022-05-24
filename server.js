@@ -29,7 +29,7 @@ app.use(cors());
 
 app.use(async(req, res, next) => {
 
-    console.log("req", req)
+    console.log("req", req.path)
 
     if(req.path !== '/authorize') {
         const token = req?.headers?.authorization?.split(' ')[1];
