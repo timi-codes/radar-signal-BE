@@ -40,15 +40,19 @@ app.use(async(req, res, next) => {
     console.log("req", req.path)
 
     if(req.path !== '/authorize') {
-        const token = req?.headers?.authorization?.split(' ')[1];
-        console.log("token", token)
-        if(!token) {
-            return res.status(401).send({error: 'You are not authorized'});
+        try {
+            const token = req?.headers?.authorization?.split(' ')[1];
+            console.log("token", token)
+            if(!token) {
+                return res.status(401).send({error: 'You are not authorized'});
+            }
+    
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const profile = await Profile.findOne({ discordId: decoded.userId });
+            req.profile = profile;
+        }catch(error) {
+            return res.status(400).send({error: 'You are not authorized'});
         }
-
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const profile = await Profile.findOne({ discordId: decoded.userId });
-        req.profile = profile;
     }
     next();
 });
