@@ -25,10 +25,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // MIDDLEWARE
 app.use(bodyParser.json());
-app.use(cors({
-    origin: '*',
-    credentials: true
-}));
+app.use(cors());
 
 app.use(async(req, res, next) => {
 
