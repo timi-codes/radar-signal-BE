@@ -13,7 +13,8 @@ const  {
 const getAuthToken = async(req, res) => {
     try {
         const { code } = req.body
-        
+        console.log(code)
+
         const { access_token, refresh_token } = await exchangeCodeForToken(code);
 
         const isARadar = await isUserARadar(access_token);
