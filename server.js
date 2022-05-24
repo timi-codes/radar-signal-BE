@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Profile = require('./model');
+const anywhere = require('express-cors-anywhere');
 
 const result = dotenv.config();
 if (result.error) {
@@ -26,6 +27,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // MIDDLEWARE
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use("/cors-anywhere", anywhere())
 
 app.use(async(req, res, next) => {
 
