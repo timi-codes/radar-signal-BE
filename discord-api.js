@@ -56,7 +56,7 @@ const postSignalToChannel = async (profile, channelId, content) => {
         crossDomain: true,
         body: JSON.stringify({ username, avatar_url, content }),
         headers: {
-            'contentType': 'application/json'
+            'Content-Type': 'application/json'
         }
     });
     return response.json();
