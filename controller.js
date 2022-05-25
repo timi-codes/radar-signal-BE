@@ -81,7 +81,7 @@ const getProfile = async(req, res) => {
 
 const submitSignal = async(req, res) => {
     try {
-        const { channelId, message } = req.body;
+        const { channelId, message, url } = req.body;
         console.log("==>", channelId, message)
     
         const profile = req.profile;
@@ -91,7 +91,7 @@ const submitSignal = async(req, res) => {
             return res.status(401).send({error: 'You  are not yet a member  of Radar Server. Please join the server'});
         }
         console.log(profile);
-        const response = await postSignalToChannel(profile, channelId, message);
+        const response = await postSignalToChannel(profile, channelId, message, url);
         console.log(response);
 
         return res.send({

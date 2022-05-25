@@ -46,8 +46,8 @@ const getUserInfo = async (access_token) => {
     return response.json();
 }
 
-const postSignalToChannel = async (profile, channelId, content) => {
-    console.log(profile, channelId, content)
+const postSignalToChannel = async (profile, channelId, content, url) => {
+    console.log(profile, channelId, content, url)
     const webhook = channels.find(channel => channel.id === channelId).webhook;
     const { username, avatar: avatar_url } = profile;
 
@@ -57,7 +57,7 @@ const postSignalToChannel = async (profile, channelId, content) => {
         body: JSON.stringify({ 
             username, 
             avatar_url, 
-            content: `URL: ${content}\n\n\nDate: ${new Date()}`
+            content: `URL: ${content}\n\n ${url}\n\nDate: ${new Date()}`
         }),
         headers: {
             'Content-Type': 'application/json'
