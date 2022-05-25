@@ -58,9 +58,8 @@ const postSignalToChannel = async (profile, channelId, content) => {
             username, 
             avatar_url, 
             content: `
-                URL: ${content} \n\`
-                Date: ${new Date().toISOString()}
-            `
+                URL: ${content} \n\n
+                Date: ${new Date()}`
         }),
         headers: {
             'Content-Type': 'application/json'
