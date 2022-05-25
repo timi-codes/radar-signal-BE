@@ -14,10 +14,9 @@ const getAuthToken = async(req, res) => {
     try {
         console.log(req.body)
         const { code } = req.body
-        console.log(code)
 
         const { access_token, refresh_token } = await exchangeCodeForToken(code);
-        console.log(access_token)
+
         const isARadar = await isUserARadar(access_token);
         if(!isARadar) {
             return res.status(401).send({error: 'You  are not yet a member  of Radar Server. Please join the server'});

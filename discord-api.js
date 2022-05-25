@@ -47,15 +47,17 @@ const getUserInfo = async (access_token) => {
 }
 
 const postSignalToChannel = async (profile, channelId, content) => {
-    console.lof(profile, channelId, content)
+    console.log(profile, channelId, content)
     const webhook = channels.find(channel => channel.id === channelId).webhook;
     const { username, avatar: avatar_url } = profile;
 
     const response = await fetch(webhook, {
         method: 'POST',
+        crossDomain: true,
         body: JSON.stringify({ username, avatar_url, content }),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json'
         }
     });
     return response.json();
