@@ -1,5 +1,5 @@
 {
-  "name": "Radar-Signal",
+  "name": "radar-signal-backend",
   "version": "1.0.0",
   "main": "server.js",
   "license": "MIT",
@@ -21,5 +21,12 @@
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.4",
     "node-fetch": "^2.6.6"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Timi Tejumola",
+      "email": "tejumoladavid@gmail.com",
+      "url": "https://github.com/timi-codes"
+    }
+  ]
 }
