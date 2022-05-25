@@ -47,6 +47,7 @@ const getUserInfo = async (access_token) => {
 }
 
 const postSignalToChannel = async (profile, channelId, content) => {
+    console.lof(profile, channelId, content)
     const webhook = channels.find(channel => channel.id === channelId).webhook;
     const { username, avatar: avatar_url } = profile;
 
@@ -54,8 +55,7 @@ const postSignalToChannel = async (profile, channelId, content) => {
         method: 'POST',
         body: JSON.stringify({ username, avatar_url, content }),
         headers: {
-            'User-Agent': 'ANYTHING_WILL_WORK_HERE',
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/json'
         }
     });
     return response.json();

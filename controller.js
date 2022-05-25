@@ -83,6 +83,8 @@ const getProfile = async(req, res) => {
 const submitSignal = async(req, res) => {
     try {
         const { channelId, message } = req.body;
+        console.log("==>", channelId, message)
+    
         const profile = req.profile;
 
         const isARadar = await isUserARadar(profile.access_token);
