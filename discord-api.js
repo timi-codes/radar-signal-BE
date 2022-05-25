@@ -15,13 +15,16 @@ const isUserARadar = async (access_token) => {
     return Boolean(guild);
 };
 
-const exchangeCodeForToken = async (code) => {
+const exchangeCodeForToken = async (redirect_uri) => {
+    const redirect = redirect_uri.split('=')[0];
+    const code = redirect_uri.split('=')[1];
+
     const params = new URLSearchParams();
     params.append('client_id', process.env.CLIENT_ID);
     params.append('client_secret', process.env.CLIENT_SECRET);
     params.append('grant_type', 'authorization_code');
     params.append('code', code);
-    params.append('redirect_uri', 'https://fkipongejlaaachjiaipijmmnhcacbca.chromiumapp.org');
+    params.append('redirect_uri', redirect);
     params.append('scope', 'identify guilds');
 
     const authResponse = await fetch(`https://discord.com/api/oauth2/token`, {

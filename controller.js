@@ -12,16 +12,14 @@ const  {
 
 const getAuthToken = async(req, res) => {
     try {
-        console.log(req.body)
-        const { code } = req.body
+        const { redirect_uri } = req.body
 
-        const { access_token, refresh_token } = await exchangeCodeForToken(code);
+        const { access_token, refresh_token } = await exchangeCodeForToken(redirect_uri);
 
         const isARadar = await isUserARadar(access_token);
         if(!isARadar) {
             return res.status(401).send({error: 'You  are not yet a member  of Radar Server. Please join the server'});
         }
-        console.log(isARadar, code)
 
         const { user } = await getUserInfo(access_token);
         await Profile.findOneAndUpdate(
@@ -35,7 +33,6 @@ const getAuthToken = async(req, res) => {
             { upsert: true, new: true, setDefaultsOnInsert: true }
         )
 
-        console.log(user)
         const token = jwt.sign(
             {
                 userId: user.id,
@@ -44,7 +41,6 @@ const getAuthToken = async(req, res) => {
             },
             process.env.JWT_SECRET,
         )
-        console.log(token)
 
         return res.send({
             token,
@@ -82,7 +78,6 @@ const getProfile = async(req, res) => {
 const submitSignal = async(req, res) => {
     try {
         const { channelId, message, url } = req.body;
-        console.log("==>", channelId, message)
     
         const profile = req.profile;
 
