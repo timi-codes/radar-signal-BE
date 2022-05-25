@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const routes = require('./routes');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
@@ -39,7 +38,7 @@ app.use(async(req, res, next) => {
 
     console.log("req", req.path)
 
-    if(req.path !== '/authorize') {
+    if(req.path !== '/authorize' &&  req.path !== '/') {
         try {
             const token = req?.headers?.authorization?.split(' ')[1];
             console.log("token", token)
