@@ -16,7 +16,7 @@ const isUserARadar = async (access_token) => {
 };
 
 const exchangeCodeForToken = async (redirect_uri) => {
-    const redirect = redirect_uri.split('=')[0];
+    const redirect = redirect_uri.split('?')[0];
     const code = redirect_uri.split('=')[1];
 
     const params = new URLSearchParams();
