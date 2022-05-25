@@ -21,7 +21,7 @@ const exchangeCodeForToken = async (code) => {
     params.append('client_secret', process.env.CLIENT_SECRET);
     params.append('grant_type', 'authorization_code');
     params.append('code', code);
-    params.append('redirect_uri', 'https://fkipongejlaaachjiaipijmmnhcacbca.chromiumapp.org');
+    params.append('redirect_uri', 'https://pnlaipihaeejalmdbkghlboffmlkojjg.chromiumapp.org');
     params.append('scope', 'identify guilds');
 
     const authResponse = await fetch(`https://discord.com/api/oauth2/token`, {
