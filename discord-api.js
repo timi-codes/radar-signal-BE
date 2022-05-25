@@ -54,7 +54,14 @@ const postSignalToChannel = async (profile, channelId, content) => {
     const response = await fetch(webhook, {
         method: 'POST',
         crossDomain: true,
-        body: JSON.stringify({ username, avatar_url, content }),
+        body: JSON.stringify({ 
+            username, 
+            avatar_url, 
+            content: `
+                URL: ${content} \n\`
+                Date: ${new Date().toISOString()}
+            `
+        }),
         headers: {
             'Content-Type': 'application/json'
         }
