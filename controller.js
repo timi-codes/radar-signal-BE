@@ -14,8 +14,8 @@ const getAuthToken = async(req, res) => {
     try {
         const { redirect_uri } = req.body
         console.log(`redirect_uri: ${redirect_uri}`)
-        const { access_token, refresh_token } = await exchangeCodeForToken(redirect_uri);
-        console.log(`access_token: ${access_token} refresh_token: ${refresh_token}`)
+        const { access_token, refresh_token, ...rest } = await exchangeCodeForToken(redirect_uri);
+        console.log(`access_token: ${access_token} refresh_token: ${rest}`)
 
         const isARadar = await isUserARadar(access_token);
         if(!isARadar) {
