@@ -28,7 +28,9 @@ const exchangeCodeForToken = async (redirect_uri) => {
         params.append('code', code);
         params.append('redirect_uri', redirect);
         params.append('scope', 'identify guilds');
-
+    
+        console.log(`params: ${params}`)
+    
         const authResponse = await fetch(`https://discord.com/api/oauth2/token`, {
             method: 'POST',  
             body: params,
