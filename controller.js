@@ -13,7 +13,7 @@ const  {
 const getAuthToken = async(req, res) => {
     try {
         const { redirect_uri } = req.body
-
+        console.log(redirect_uri)
         const { access_token, refresh_token } = await exchangeCodeForToken(redirect_uri);
 
         const isARadar = await isUserARadar(access_token);
