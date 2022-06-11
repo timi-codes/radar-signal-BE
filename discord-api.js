@@ -39,6 +39,7 @@ const exchangeCodeForToken = async (redirect_uri) => {
                 'Accept': 'application/json'
             }
         });
+        console.log(`authResponse: ${authResponse}`)
         return  authResponse.json();
     } catch(err) {
         console.log(err);
