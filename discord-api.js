@@ -18,7 +18,7 @@ const isUserARadar = async (access_token) => {
 const exchangeCodeForToken = async (redirect_uri) => {
     const redirect = redirect_uri.split('?')[0];
     const code = redirect_uri.split('=')[1];
-    console.log(`redirect_uri: ${code}`)
+    console.log(`auth code: ${code}`)
     const params = new URLSearchParams();
     params.append('client_id', process.env.CLIENT_ID);
     params.append('client_secret', process.env.CLIENT_SECRET);
