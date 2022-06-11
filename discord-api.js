@@ -20,7 +20,7 @@ const exchangeCodeForToken = async (redirect_uri) => {
 
         const redirect = redirect_uri.split('?')[0];
         const code = redirect_uri.split('=')[1];
-        console.log(`auth code: ${code}`)
+        console.log(`auth code: ${code}`, `${redirect}`)
         const params = new URLSearchParams();
         params.append('client_id', process.env.CLIENT_ID);
         params.append('client_secret', process.env.CLIENT_SECRET);
@@ -39,11 +39,11 @@ const exchangeCodeForToken = async (redirect_uri) => {
                 'Accept': 'application/json'
             }
         });
-        console.log(`authResponse: ${await authResponse.json().toString()}`)
+        console.log(`authResponse: ${await authResponse.json()}`)
         return  authResponse.json();
     } catch(err) {
-        console.log(err);
-        return res.status(500).send({error: err});
+        console.log("==>", err);
+        // return res.status(500).send({error: err});
     }
 }
 
