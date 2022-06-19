@@ -1,0 +1,20 @@
+ [
+    {
+        "name": "Test1",
+        "category": "test",
+        "id": "967128888444596274",
+        "webhook": "https://discord.com/api/webhooks/988231078441529344/OA4nT5Nyu3J3LSFepSyqfhOOOS04LpqOjs-OSV_4jilX9nVazrBWZvyalJPbiqhHm3UQ"
+    },
+    {
+        "name": "Test2",
+        "category": "test",
+        "id": "967128908027801620",
+        "webhook": "https://discord.com/api/webhooks/988231213598769172/FndHIszMt9LKmdFBZC3ZoVMzJhQScaaMC77WbYZ9wVMs8Q3EqVr7Lm9CLSCm_0spccq9"
+    },
+    {
+        "name": "Test3",
+        "category": "test",
+        "id": "967128925807448114",
+        "webhook": "https://discord.com/api/webhooks/988231334541529180/gJU8CDY5l7yAmw-3LGfdjFLIV7VNsN8Ncr-2A6UvGZftHRAyaDKnFsiTOmkqKhcimYN3"
+    }
+]
