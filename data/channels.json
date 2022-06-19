@@ -3,18 +3,18 @@
         "name": "Test1",
         "category": "test",
         "id": "967128888444596274",
-        "webhook": "https://discord.com/api/webhooks/967128967322689636/9-ebuANx9cqCy6E_ZEp2h6L_ZfCvrZ5pxuX3EQLXEGPxXwcbX7d8Neu9i5zAw22gqCXK"
+        "webhook": "https://discord.com/api/webhooks/979487116960616478/tOChxMz4jJRS_zu16CFpAsO5XS6b0jz9R_sqGhbfCvx1UGriKk-1BzPuBeKEd6kNZUfM"
     },
     {
         "name": "Test2",
         "category": "test",
         "id": "967128908027801620",
-        "webhook": "https://discord.com/api/webhooks/967129003704061982/rZMYZIURT1SMh-M1-366CGufoVMXPmNEH3IADjpRTJ_g347i1angvn5XikoXKo34q5nm"
+        "webhook": "https://discord.com/api/webhooks/979487150225641493/1POUoYu1C8UFCvAuPpmVBb0_Pq6qzuY2X11Fb9dM1vIuL0IOkT7MT9u0YgfPBUm5HiYE"
     },
     {
         "name": "Test3",
         "category": "test",
         "id": "967128925807448114",
-        "webhook": "https://discord.com/api/webhooks/967129045504503818/TkLkkRgtFnBJCv_FZBUU7L7VO44uwGD_MhMo7DjL6YYK_MfWUcvEp_vJPnjjgxR6JTCt"
+        "webhook": "https://discord.com/api/webhooks/979487185558446121/kyOgw-iFUEUF_nhghSN-lAcSKqdmI84uxnhWuCJ0XeQonHDH87NhzfQ3mV8BJF_6zGjk"
     }
 ]
