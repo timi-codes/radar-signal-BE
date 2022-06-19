@@ -1,5 +1,5 @@
 
 
 .env
-data/example.channels.json
+*.channels.json
 node_modules
