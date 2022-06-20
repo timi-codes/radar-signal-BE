@@ -1,20 +1,195 @@
- [
+[
     {
-        "name": "Test1",
-        "category": "test",
-        "id": "967128888444596274",
-        "webhook": "https://discord.com/api/webhooks/988231078441529344/OA4nT5Nyu3J3LSFepSyqfhOOOS04LpqOjs-OSV_4jilX9nVazrBWZvyalJPbiqhHm3UQ"
+        "name": "Education",
+        "category": "People & Planet",
+        "id": "915259586817167390",
+        "webhook":"https://discord.com/api/webhooks/978845069442445342/SnigGYlpQ7T9_Ae22beiGZK39tvtqTeEhYthu84XQsIXR4EK8ZrmzfH_a7GB74n_0E2G"
     },
     {
-        "name": "Test2",
-        "category": "test",
-        "id": "967128908027801620",
-        "webhook": "https://discord.com/api/webhooks/988231213598769172/FndHIszMt9LKmdFBZC3ZoVMzJhQScaaMC77WbYZ9wVMs8Q3EqVr7Lm9CLSCm_0spccq9"
+        "name": "Science",
+        "category": "People & Planet",
+        "id": "933607065698570310",
+        "webhook":"https://discord.com/api/webhooks/978845390445101116/y8rV1iAPOsPYI3DrgrDU4UD3jP3pPvVY3NLerSGuV-9tuKRWGmQC6zzKncpzfBEVBy8n"
     },
     {
-        "name": "Test3",
-        "category": "test",
-        "id": "967128925807448114",
-        "webhook": "https://discord.com/api/webhooks/988231334541529180/gJU8CDY5l7yAmw-3LGfdjFLIV7VNsN8Ncr-2A6UvGZftHRAyaDKnFsiTOmkqKhcimYN3"
+        "name": "Environmental",
+        "category": "People & Planet",
+        "id": "915175926071971870",
+        "webhook":"https://discord.com/api/webhooks/967059753152958574/X7-AqxbCsd1nBrZ1UULYtmaoLU82WR12lnFdwYP2JIpE8ivfBHkshXMmphevjpLCjVV-"
+    },
+    {
+        "name": "Relationships",
+        "category": "People & Planet",
+        "id": "940414092785623040",
+        "webhook":"https://discord.com/api/webhooks/978845517306036224/JjdzhjbVTvr95xHuAwg-MbOs0clqTgTPSTQh1n6Q5IbjuTxwgK41zMNXrONmD_w5yCuG"
+    },
+    {
+        "name": "Community",
+        "category": "People & Planet",
+        "id": "914870099343736883",
+        "webhook":"https://discord.com/api/webhooks/967059542410154055/DF9_a1XdGbaqyROnQtrpV6SEZUOw5WgphkA-Jdc3ta-DA4HUkyYw7Xs6mMUmloSN0HID"
+    },
+    {
+        "name": "Social Justice",
+        "category": "People & Planet",
+        "id": "933608263549853757",
+        "webhook":""
+    },
+    {
+        "name": "Labour",
+        "category": "People & Planet",
+        "id": "940977792684810270",
+        "webhook":"https://discord.com/api/webhooks/978845631743418409/JjOt6AOQtKLO9XknaPBKQ1PAYcWll6ma3I6PlW02i9Sv6HKErdql4CT2vs8nViVlpJz2"
+    },
+    {
+        "name": "Travel",
+        "category": "People & Planet",
+        "id": "976715882959097866",
+        "webhook":"https://discord.com/api/webhooks/978845736475189309/Cqm6-smQVOeFirBARcoIimOJ72tFiFlqkJqsbQ2SIW5_7RUOYmgNfLc4wEjD7hNzm4SQ"
+    },
+    {
+        "name": "Gaming",
+        "category": "Creative",
+        "id": "915259646565052446",
+        "webhook":"https://discord.com/api/webhooks/978845864552452096/Vn9nZDmaZ2sWu0iddQQtpsJ34-Vpj_IMoLN-yLKzwUsLAVTTHTUFOHWMqN0CcsBYFmRK"
+    },
+    {
+        "name": "Fashion",
+        "category": "Creative",
+        "id": "915175774716309504",
+        "webhook":"https://discord.com/api/webhooks/978845940175745054/iQWJ1YX-UEWKipivZ9ej-ar8YG6L8_24JySTO3GgxfUuSoP1ZOSHwFX2-M54Ucy8Bbab"
+    },
+    {
+        "name": "Audio",
+        "category": "Creative",
+        "id": "918612968437075978",
+        "webhook":"https://discord.com/api/webhooks/978846015039864892/p_RhW6A-ZorL6u68pWC3YJIVrq5oh4l40yZGw-bkSz1WgDbvX_A5qfcACX6nnehSRUR5"
+    },
+    {
+        "name": "Aesthetics",
+        "category": "Creative",
+        "id": "933607625067737149",
+        "webhook":"https://discord.com/api/webhooks/978846116093239316/Q4UERedjrAsWf4rMSkDTL8pIvdCeKI5qabSwiyezVM0DIEnk_DDRa0NBY2gYLIRiBC7l"
+    },
+    {
+        "name": "Media Brands",
+        "category": "Creative",
+        "id": "933607650984337448",
+        "webhook":"https://discord.com/api/webhooks/967059828306477086/R8tVxMBsBNvVSd_ZcJS4a1jVYGDWpLQhChIL9rWUV4uWxMmaR_bvKdGRA2eqf-E8cld_"
+    },
+    {
+        "name": "art",
+        "category": "Creative",
+        "id": "971152097707982938",
+        "webhook":"https://discord.com/api/webhooks/978846444637274114/QFhgl8oXbKhcCIaMCr_qwttytPALVLNRDNw7I9HpWTTVdpMrTYHPnZlCCVuktWo03t1E"
+    },
+    {
+        "name": "Internet x Web3",
+        "category": "Technology",
+        "id": "915259602587754496",
+        "webhook":"https://discord.com/api/webhooks/978846516431179776/y9hUMGeyeo8eJrW0G2UjvEQVbj2xB2IO-oq9jyJGA4NhPUnO_MGotG8BgUtapetej0q1"
+    },
+    {
+        "name": "Social Media",
+        "category": "Technology",
+        "id": "915223298449768478",
+        "webhook":"https://discord.com/api/webhooks/978846600866697296/4Ob6YBE82QyOjhx5UNG3byMnF3ryzIufj6p3FyaEctPE70Rl_Rm4hZ8Odwf4M56rpl1I"
+    },
+    {
+        "name": "Digital Culture",
+        "category": "Technology",
+        "id": "918528258558001172",
+        "webhook":"https://discord.com/api/webhooks/978846771553918976/jX7ID2ASsvS_xIeq3VhG9asc5BTocC8Ktt6cPO30scjfFCSl_gYdxbP7snIzVKFBlBhR"
+    },
+    {
+        "name": "Extended Reality",
+        "category": "Technology",
+        "id": "933607091996868648",
+        "webhook":"https://discord.com/api/webhooks/978846868291334164/2U-Fx14r3ZXXeG-NEV-jIz9xtMIrwTuquxt7Fczz_SonMdJ1YxDFfS-8atwuoSC5dLVH"
+    },
+    {
+        "name": "AI Algorithms",
+        "category": "Technology",
+        "id": "934044469421031444",
+        "webhook":"https://discord.com/api/webhooks/978846959681036288/uosBqoJJtyNrNmalI1JSoKEVggnFnPnu9kpOwOw0kKKttmuhGO5XjCJzAKGskyYzZrDM"
+    },
+    {
+        "name": "Finances",
+        "category": "Technology",
+        "id": "958363530145464381",
+        "webhook":"https://discord.com/api/webhooks/978847037070139412/XFSNx77AmkoatYbPdOzg40xEUJFtB6miO0RdRmEJOZCikhlbIms7KGZLOonMrogfP4OO"
+    },
+    {
+        "name": "Food Bev",
+        "category": "Health & Wellness",
+        "id": "915223143268880384",
+        "webhook":"https://discord.com/api/webhooks/978847132201144360/_gSgOEerAfYm9U41hwk30MiN-LHHA5QriHCICMgOxNGNujHv6xqG8Hvaluz3kMmGxm-7"
+    },
+    {
+        "name": "Lifestyle",
+        "category": "Health & Wellness",
+        "id": "933606520971743242",
+        "webhook":"https://discord.com/api/webhooks/978847196256538664/EE7mUHBTOXW8iBho9_sxP3YAljqcJmclnKp6xY4nXRcsl4kXDhTy1CIB4nVSez1qkPwI"
+    },
+    {
+        "name": "Sport",
+        "category": "Health & Wellness",
+        "id": "933606548910006302",
+        "webhook":"https://discord.com/api/webhooks/978847292536782908/SQRAR3tGS_JcV3BW4D8JganKEbwvQEMOydePG_q3c3xurHEb_AvY2Z5Pizh-qW7_iqCa"
+    },
+    {
+        "name": "Spirituality",
+        "category": "Health & Wellness",
+        "id": "915870463073353748",
+        "webhook":"https://discord.com/api/webhooks/978847371133878272/1ZtQ3BIjrJ8H5lCKkO_XLl2RaJtBmRC9gpoyTouodfkKKPEaCkzL1OEvZ4ix7tKRwHL_"
+    },
+    {
+        "name": "Mental Health",
+        "category": "Health & Wellness",
+        "id": "933606601212956692",
+        "webhook":"https://discord.com/api/webhooks/978847465899958322/CjG1RcX3WQWBmC1O8sESnwU_uvI0FmWw-5LIspKezNGgsbs_Bwt1r4W9vT-KD_ZUbchE"
+
+    },
+    {
+        "name": "Health and Healthcare",
+        "category": "Health & Wellness",
+        "id": "974308589646782505",
+        "webhook":"https://discord.com/api/webhooks/978847656694657135/9eV1qbeXgtR0RknbQBCkWWdgio8Ztgnn6JfJMtiT7zXrK6x8k4ZnjLxMlrZknwWGLroO"
+    },
+    {
+        "name": "Youth",
+        "category": "Identity",
+        "id": "915175945453834300",
+        "webhook":"https://discord.com/api/webhooks/978847916519206912/U8EFOGMiHXsBhdMcFpYeE3GI5cRux-i7eV0Tx-BfDF7ixKDRx-At_0oe7U8EuJVfczZj"
+    },
+    {
+        "name": "Belonging",
+        "category": "Identity",
+        "id": "933606217228627998",
+        "webhook":"https://discord.com/api/webhooks/978848084610134036/0tPaWfD1lxtQimEHZkgAuLLB3-kMEtDsrp1ihsFbBR3c8Lb-fnIlnBzrrRUq0jQNzhRt"
+    },
+    {
+        "name": "Heritage Legacy",
+        "category": "Identity",
+        "id": "933606258328629258",
+        "webhook":"https://discord.com/api/webhooks/978905289422176256/J3XhNyyCT7SA05FplpYIvWjeuGoLgj2bDdOANKxjsmhEq41QvQoGXpeSlSV6xXevUHSi"
+    },
+    {
+        "name": "Self",
+        "category": "Identity",
+        "id": "933606283649646593",
+        "webhook":"https://discord.com/api/webhooks/978905472528691240/SE_u1BxSgAqMYFa6g91wdizcdr-e5eTUz9P4LxDvJw16UBluuJlITtdDegFv5rSNmL7I"
+    },
+    {
+        "name": "Beauty",
+        "category": "Identity",
+        "id": "918879374118355005",
+        "webhook":"https://discord.com/api/webhooks/978905931721080875/YVAqSwdAaQnu-NdQlasLdErzIjTIocRT1s9EqgawA0iIoA9elPOeS_TxMHMWLiD-AhBp"
+    },
+    {
+        "name": "Pop Culture",
+        "category": "Identity",
+        "id": "972483284980351026",
+        "webhook":"https://discord.com/api/webhooks/978906027447709747/BYoZW1fyJIQ4QSFLnYTcMGklxF13lanoBXf9-RGEFzaNHqvzd0lPj5W2fzA-V8sUW-wu"
     }
 ]
