@@ -1,4 +1,4 @@
-const channels = require('./data/.test.channels.json');
+const channels = require('./data/test.channels.json');
 const fetch = require('node-fetch');
 
 
@@ -15,24 +15,36 @@ const isUserARadar = async (access_token) => {
     return Boolean(guild);
 };
 
-const exchangeCodeForToken = async (code) => {
-    const params = new URLSearchParams();
-    params.append('client_id', process.env.CLIENT_ID);
-    params.append('client_secret', process.env.CLIENT_SECRET);
-    params.append('grant_type', 'authorization_code');
-    params.append('code', code);
-    params.append('redirect_uri', 'https://fkipongejlaaachjiaipijmmnhcacbca.chromiumapp.org');
-    params.append('scope', 'identify guilds');
+const exchangeCodeForToken = async (redirect_uri) => {
+    try {
 
-    const authResponse = await fetch(`https://discord.com/api/oauth2/token`, {
-        method: 'POST',  
-        body: params,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Accept': 'application/json'
-        }
-    });
-    return  authResponse.json();
+        const redirectURIParams = new URLSearchParams(redirect_uri);
+        const redirect = redirect_uri.split('?')[0];
+        const code = redirectURIParams.get("code");
+        console.log(`auth code: ${code}`, `${redirect}`)
+        const params = new URLSearchParams();
+        params.append('client_id', process.env.CLIENT_ID);
+        params.append('client_secret', process.env.CLIENT_SECRET);
+        params.append('grant_type', 'authorization_code');
+        params.append('code', code);
+        params.append('redirect_uri', redirect);
+        params.append('scope', 'identify guilds');
+    
+        console.log(`params: ${params}`)
+    
+        const authResponse = await fetch(`https://discord.com/api/oauth2/token`, {
+            method: 'POST',  
+            body: params,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Accept': 'application/json'
+            }
+        });
+        return  authResponse.json();
+    } catch(err) {
+        console.log("==>", err);
+        // return res.status(500).send({error: err});
+    }
 }
 
 const getUserInfo = async (access_token) => {

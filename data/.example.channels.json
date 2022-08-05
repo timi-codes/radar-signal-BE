@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Channel 1",
+        "category": "channel-1",
+        "id": "000000000000000001",
+        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+    },
+    {
+        "name": "Channel 2",
+        "category": "channel-2",
+        "id": "000000000000000002",
+        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+    },
+    {
+        "name": "Channel 3",
+        "category": "channel-3",
+        "id": "000000000000000001",
+        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+    }
+]

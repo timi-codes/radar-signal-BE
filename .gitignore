@@ -1,3 +1,3 @@
 .env
-data/.test.channels.json
+data/test.channels.json
 node_modules
