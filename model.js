@@ -6,8 +6,8 @@ var ProfileSchema = new Schema({
     username: { type: String, required: true },
     avatar: { type: String, required: true },
     refresh_token: { type: String },
-    access_token: { type: String},
+    access_token: { type: String },
     createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Profile', ProfileSchema );
+module.exports = mongoose.model('Profile', ProfileSchema);
