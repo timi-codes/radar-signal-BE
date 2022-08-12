@@ -56,9 +56,22 @@ const getUserInfo = async access_token => {
     return response.json();
 };
 
+const getWebhook = async webhookId => {
+    const response = await fetch(`https://discord.com/api/webhooks/${webhookId}`, {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            Accept: 'application/json',
+            Authorization: `Bot ${process.env.BOT_TOKEN}`
+        }
+    });
+    return response.json();
+}
+
 const postSignalToChannel = async (profile, channelId, content, url) => {
     console.log(profile, channelId, content, url);
-    const webhook = channels.find(channel => channel.id === channelId).webhook;
+    const webhookId = channels.find(channel => channel.id === channelId).webhookId;
+    const webhookToken = await getWebhook(webhookId).then(w => w.token);
+    const webhook = `https://discord.com/api/webhooks/${webhookId}/${webhookToken}`;
     const { username, avatar: avatar_url } = profile;
 
     const response = await fetch(webhook, {

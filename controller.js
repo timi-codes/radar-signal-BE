@@ -48,7 +48,7 @@ const getAuthToken = async (req, res) => {
             userId: user.id,
             username: `${user.username}#${user.discriminator}`,
             avatar: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`,
-            channels: channels.map(({ webhook, ...rest }) => rest)
+            channels: channels.map(({ webhookId, ...rest }) => rest)
         });
     } catch (err) {
         console.log(err);
@@ -70,7 +70,7 @@ const getProfile = async (req, res) => {
             userId: profile.discordId,
             username: profile.username,
             avatar: profile.avatar,
-            channels: channels.map(({ webhook, ...rest }) => rest)
+            channels: channels.map(({ webhookId, ...rest }) => rest)
         });
     } catch (err) {
         console.log(err);

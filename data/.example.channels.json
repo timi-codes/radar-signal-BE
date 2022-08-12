@@ -3,18 +3,18 @@
         "name": "Channel 1",
         "category": "channel-1",
         "id": "000000000000000001",
-        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+        "webhookId": "000000000000000004"
     },
     {
         "name": "Channel 2",
         "category": "channel-2",
         "id": "000000000000000002",
-        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+        "webhookId": "000000000000000005"
     },
     {
         "name": "Channel 3",
         "category": "channel-3",
-        "id": "000000000000000001",
-        "webhook": "https://discord.com/api/webhooks/{channel}/{AUTH_KEY}"
+        "id": "000000000000000003",
+        "webhookId": "000000000000000006"
     }
 ]
