@@ -1,6 +1,6 @@
 const Profile = require('./model');
 const jwt = require('jsonwebtoken');
-const channels = require('./data/test.channels.json');
+const channels = require('./data/channels.json');
 const {
     isUserARadar,
     exchangeCodeForToken,

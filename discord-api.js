@@ -1,4 +1,4 @@
-const channels = require('./data/test.channels.json');
+const channels = require('./data/channels.json');
 const fetch = require('node-fetch');
 
 const isUserARadar = async access_token => {
